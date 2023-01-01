@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+
+:root {
+  --color-body: #b6cbce;
+  --color-heading: #eef3db;
+  --color-primary: #1a237e;
+  --color-primary2: #121858;
+  --color-secondary: #e64a19;
+  --color-secondary2: #eb6e47;
+  --sidebar-width: 240px;
+  --font-base: "Bai Jamjuree";
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body {
+  background-color: var(--color-primary2);
+  color: var(--color-body);
+  font-family: var(--font-base), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-body);
+  transition: all 0.4s ease;
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+img {
+  width: 100%;
+}
+
+.text-brand {
+  color: var(--color-secondary);
+}
+
+.bg-base {
+  background-color: var(--color-primary);
+}
+
+.full-height {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(#002658c4, #002658c4),
+    url(../images/cloud-pixel.gif);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.shadow-effect {
+  transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+  box-shadow: -6px 6px 0 0 var(--color-secondary);
+}
+
+.iconbox {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+/* navbar */
+.navbar {
+  background-color: var(--color-primary);
+}
+
+.navbar .nav-link {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.navbar .nav-link:hover {
+  color: var(--color-secondary);
+}
+
+.navbar .nav-link.active {
+  color: var(--color-secondary);
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    min-height: 100vh;
+    width: var(--sidebar-width);
+    background: linear-gradient(#003c6cc4, #003c6cc4),
+      url(../images/sidebar-1.gif);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 0 18px 0 rgba(0, 0, 0, 0.568);
+  }
+
+  .navbar-brand img {
+    border: 8px solid var(--color-secondary);
+  }
+
+  /* CONTENT */
+  #content-wrapper {
+    padding-left: var(--sidebar-width);
+  }
+}
+
+/* BTN */
+.btn {
+  padding: 12px 28px;
+  font-weight: 700;
+}
+
+.btn-brand {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+  background-color: var(--color-secondary2);
+  color: var(--color-primary);
+  border-color: var(--color-secondary2);
+}
+
+.link-custom {
+  font-weight: 700;
+  position: relative;
+}
+
+.link-custom::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-secondary);
+  position: absolute;
+  left: 0;
+  top: 110%;
+  transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+  width: 100%;
+}
+
+/* CARD */
+.card-custom .card-custom-image {
+  overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+  transition: all 0.4s ease-out;
+}
+
+.card-custom:hover .card-custom-image img {
+  transform: scale(1.08);
+}
+
+/* ---- reset ---- */
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #b6192400;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+} /* ---- stats.js ---- */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+.js-count-particles {
+  font-size: 1.1em;
+}
+#stats,
+.count-particles {
+  user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
